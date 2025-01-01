@@ -1,0 +1,30 @@
+{
+	"name": "ds_source_lookup",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_source_lookup",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "varchar"
+			},
+			{
+				"name": "name",
+				"type": "varchar"
+			},
+			{
+				"name": "country",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "resign_employee"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
