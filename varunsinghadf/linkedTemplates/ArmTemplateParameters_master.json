@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "varunsinghadf"
+		},
+		"ls_sink_foreach_connectionString": {
+			"value": ""
+		},
+		"ls_sink_lookup1_connectionString": {
+			"value": ""
+		},
+		"ls_sink_txt_connectionString": {
+			"value": ""
+		},
+		"ls_source_delete_txt_connectionString": {
+			"value": ""
+		},
+		"ls_source_foreach_connectionString": {
+			"value": ""
+		},
+		"ls_source_lookup_password": {
+			"value": ""
+		},
+		"ls_source_lookup1_connectionString": {
+			"value": ""
+		},
+		"ls_source_lookupsql_password": {
+			"value": ""
+		},
+		"ls_source_txt_connectionString": {
+			"value": ""
+		},
+		"lss_source_delete_txt_connectionString": {
+			"value": ""
+		},
+		"ls_source_lookup_properties_typeProperties_server": {
+			"value": "varunsinghserver1.database.windows.net"
+		},
+		"ls_source_lookup_properties_typeProperties_database": {
+			"value": "varunsinghdatabase"
+		},
+		"ls_source_lookup_properties_typeProperties_userName": {
+			"value": "varunsinghserver1"
+		},
+		"ls_source_lookupsql_properties_typeProperties_server": {
+			"value": "varunsinghserver1.database.windows.net"
+		},
+		"ls_source_lookupsql_properties_typeProperties_database": {
+			"value": "varunsinghdatabase"
+		},
+		"ls_source_lookupsql_properties_typeProperties_userName": {
+			"value": "varunsinghserver1"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

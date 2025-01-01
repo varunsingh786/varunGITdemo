@@ -1,0 +1,174 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "varunsinghadf"
+		},
+		"ls_sink_foreach_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_sink_foreach'"
+		},
+		"ls_sink_lookup1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_sink_lookup1'"
+		},
+		"ls_sink_txt_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_sink_txt'"
+		},
+		"ls_source_delete_txt_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_source_delete_txt'"
+		},
+		"ls_source_foreach_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_source_foreach'"
+		},
+		"ls_source_lookup_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_source_lookup'"
+		},
+		"ls_source_lookup1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_source_lookup1'"
+		},
+		"ls_source_lookupsql_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_source_lookupsql'"
+		},
+		"ls_source_txt_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_source_txt'"
+		},
+		"lss_source_delete_txt_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'lss_source_delete_txt'"
+		},
+		"ls_source_lookup_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "varunsinghserver1.database.windows.net"
+		},
+		"ls_source_lookup_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "varunsinghdatabase"
+		},
+		"ls_source_lookup_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "varunsinghserver1"
+		},
+		"ls_source_lookupsql_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "varunsinghserver1.database.windows.net"
+		},
+		"ls_source_lookupsql_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "varunsinghdatabase"
+		},
+		"ls_source_lookupsql_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "varunsinghserver1"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "varunsinghadf_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_sink_foreach_connectionString": {
+						"value": "[parameters('ls_sink_foreach_connectionString')]"
+					},
+					"ls_sink_lookup1_connectionString": {
+						"value": "[parameters('ls_sink_lookup1_connectionString')]"
+					},
+					"ls_sink_txt_connectionString": {
+						"value": "[parameters('ls_sink_txt_connectionString')]"
+					},
+					"ls_source_delete_txt_connectionString": {
+						"value": "[parameters('ls_source_delete_txt_connectionString')]"
+					},
+					"ls_source_foreach_connectionString": {
+						"value": "[parameters('ls_source_foreach_connectionString')]"
+					},
+					"ls_source_lookup_password": {
+						"value": "[parameters('ls_source_lookup_password')]"
+					},
+					"ls_source_lookup1_connectionString": {
+						"value": "[parameters('ls_source_lookup1_connectionString')]"
+					},
+					"ls_source_lookupsql_password": {
+						"value": "[parameters('ls_source_lookupsql_password')]"
+					},
+					"ls_source_txt_connectionString": {
+						"value": "[parameters('ls_source_txt_connectionString')]"
+					},
+					"lss_source_delete_txt_connectionString": {
+						"value": "[parameters('lss_source_delete_txt_connectionString')]"
+					},
+					"ls_source_lookup_properties_typeProperties_server": {
+						"value": "[parameters('ls_source_lookup_properties_typeProperties_server')]"
+					},
+					"ls_source_lookup_properties_typeProperties_database": {
+						"value": "[parameters('ls_source_lookup_properties_typeProperties_database')]"
+					},
+					"ls_source_lookup_properties_typeProperties_userName": {
+						"value": "[parameters('ls_source_lookup_properties_typeProperties_userName')]"
+					},
+					"ls_source_lookupsql_properties_typeProperties_server": {
+						"value": "[parameters('ls_source_lookupsql_properties_typeProperties_server')]"
+					},
+					"ls_source_lookupsql_properties_typeProperties_database": {
+						"value": "[parameters('ls_source_lookupsql_properties_typeProperties_database')]"
+					},
+					"ls_source_lookupsql_properties_typeProperties_userName": {
+						"value": "[parameters('ls_source_lookupsql_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "varunsinghadf_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'varunsinghadf_ArmTemplate_0')]"
+			]
+		}
+	]
+}
